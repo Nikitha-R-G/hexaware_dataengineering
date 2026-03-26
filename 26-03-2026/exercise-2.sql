@@ -65,19 +65,19 @@ group by s.student_name ;
 
 -- 10
 select s.student_name,count(e.course_name) as total_number_of_courses from students s left join enrollments e on s.student_id=e.student_id 
-group by s.student_name having total_number_of_courses>1 ;
+group by s.student_name having count(e.course_name)>1 ;
 
 -- 11
 select trainer,sum(fee) as total_collected_fee from enrollments group by trainer 
-having total_collected_fee>10000;
+having sum(fee)>10000;
 
 -- 12
 select city,count(student_id) as total_number_of_students from students group by city
-having total_number_of_students>1;
+having count(student_id)>1;
 
 -- capstone query
 select s.student_name,s.city,sum(e.fee) as total_fee_paid from students s inner join enrollments e on s.student_id=e.student_id 
-group by s.student_name,s.city having total_fee_paid>5000 order by total_fee_paid desc;
+group by s.student_name,s.city having sum(e.fee)>5000 order by total_fee_paid desc;
 
 
 
