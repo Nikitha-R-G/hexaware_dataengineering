@@ -95,19 +95,19 @@ select city,count(emp_id) from employees group by city;
 -- having
 -- 15
 select e.emp_name,count(p.project_id)as total_projects from employees e left join projects p
-on e.emp_id=p.emp_id group by e.emp_name having total_projects>1;
+on e.emp_id=p.emp_id group by e.emp_name having count(p.project_id)>1;
 
 -- 16
 select e.department,sum(p.project_budget)as total_budget from employees e left join projects p
-on e.emp_id=p.emp_id group by e.department having total_budget > 150000;
+on e.emp_id=p.emp_id group by e.department having sum(p.project_budget) > 150000;
 
 -- 17
 select e.emp_name,sum(p.project_budget)as total_project_budget from employees e left join projects p
-on e.emp_id=p.emp_id group by e.emp_name having total_project_budget>100000;
+on e.emp_id=p.emp_id group by e.emp_name having sum(p.project_budget)>100000;
 
 -- Capstone Query
 select e.emp_name,e.department,sum(p.project_budget)as total_project_budget from employees e  join projects p
-on e.emp_id=p.emp_id group by e.emp_name,e.department having total_project_budget>100000 order by total_project_budget desc;
+on e.emp_id=p.emp_id group by e.emp_name,e.department having sum(p.project_budget)>100000 order by total_project_budget desc;
 
 
 
