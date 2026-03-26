@@ -75,7 +75,7 @@ having total_collected_fee>10000;
 select city,count(student_id) as total_number_of_students from students group by city
 having total_number_of_students>1;
 
--- 13
+-- capstone query
 select s.student_name,s.city,sum(e.fee) as total_fee_paid from students s inner join enrollments e on s.student_id=e.student_id 
 group by s.student_name,s.city having total_fee_paid>5000 order by total_fee_paid desc;
 
