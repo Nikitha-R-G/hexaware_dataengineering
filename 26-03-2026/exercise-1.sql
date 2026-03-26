@@ -55,15 +55,15 @@ select e.emp_name,p.project_name from employees e  cross join projects p ;
 
 -- join with filtering
 -- 6
-select e.department, p.project_name from employees e  join projects p on e.emp_id=
+select e.emp_name, p.project_name from employees e inner join projects p on e.emp_id=
 p.emp_id where department='IT';
 
 -- 7
-select project_name from projects where project_budget>100000;
+select project_name,project_budget from projects where project_budget>100000;
 
 -- 8
-select e.emp_name, p.project_name from employees e  join projects p on e.emp_id=
-p.emp_id where city='Hyderabad';
+select e.emp_name, p.project_name from employees e  inner join projects p on e.emp_id=
+p.emp_id where e.city='Hyderabad';
 
 -- aggregate fun
 
@@ -90,7 +90,7 @@ select e.department,sum(p.project_budget)as total_budget from employees e left j
 on e.emp_id=p.emp_id group by e.department;
 
 -- 14
-select city,count(emp_id) from employees group by city;
+select city,count(emp_id) as total_employees from employees group by city;
 
 -- having
 -- 15
