@@ -1,7 +1,5 @@
 # Python Data Structures
-from Demos.RegCreateKeyTransacted import classname
-from numpy.ma import count
-from numpy.ma.extras import average
+
 
 # Exercise 1 – Remove Duplicates from a List
 
