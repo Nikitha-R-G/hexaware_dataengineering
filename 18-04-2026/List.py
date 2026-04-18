@@ -1,4 +1,4 @@
-from numpy.ma.extras import average
+
 
 numbers=[10,20,30,40,50]
 print(numbers)
@@ -58,4 +58,4 @@ print(numbers)
 print(max(numbers))
 print(min(numbers))
 print(sum(numbers))
-print(average(numbers))
+
