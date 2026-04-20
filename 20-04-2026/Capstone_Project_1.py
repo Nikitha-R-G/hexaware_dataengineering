@@ -55,7 +55,7 @@
 # Task 1
 #
 # Read website_visits.txt .
-from itertools import product
+
 
 website=[]
 with open("website_visits.txt","r") as file:
