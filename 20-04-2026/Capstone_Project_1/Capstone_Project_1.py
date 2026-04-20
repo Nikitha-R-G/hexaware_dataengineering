@@ -58,7 +58,7 @@
 
 
 website=[]
-with open("website_visits.txt","r") as file:
+with open("website_visits.txt", "r") as file:
     for line in file:
         website.append(line.strip())
 #
@@ -66,7 +66,7 @@ with open("website_visits.txt","r") as file:
 #
 # Print all visitors.
 print("Print all visitors.")
-with open("website_visits.txt","r") as file:
+with open("website_visits.txt", "r") as file:
     for line in file:
         print(line.strip())
 #
@@ -74,7 +74,7 @@ with open("website_visits.txt","r") as file:
 #
 # Find the total number of visits.
 total_visits=0
-with open("website_visits.txt","r") as file:
+with open("website_visits.txt", "r") as file:
     for line in file:
         total_visits+=1
 print("total_visits",total_visits)
@@ -116,7 +116,7 @@ print("the most frequent visitor is",max(visits,key=visits.get))
 #
 # Read products.json .
 import json
-with open("products.json","r") as file:
+with open("products.json", "r") as file:
     products=json.load(file)
 print("products:",products)
 
@@ -174,7 +174,7 @@ print("the least expensive product:",expensive)
 # Task 12
 #
 # Read orders.csv .
-with open("orders.csv","r") as file:
+with open("orders.csv", "r") as file:
     lines = file.readlines()
 #
 # Task 13
@@ -319,7 +319,7 @@ for name,price in customer_revenue.items():
 # Load visits from TXT.
 def visits():
     website_visits=[]
-    with open("website_visits.txt","r") as file:
+    with open("website_visits.txt", "r") as file:
         for line in file:
             website_visits.append(line.strip())
     return website_visits
@@ -329,7 +329,7 @@ def visits():
 #
 # Load product catalog from JSON.
 def products():
-    with open("products.json","r") as file:
+    with open("products.json", "r") as file:
         products=json.load(file)
     product_dict={}
     for p in products["products"]:
@@ -343,7 +343,7 @@ def products():
 #
 # Load orders from CSV.
 def orders():
-    with open("orders.csv","r") as file:
+    with open("orders.csv", "r") as file:
         lines=file.readlines()
     order_dict = {}
     productid = 0
@@ -471,7 +471,7 @@ def generate_report(visits, orders, product_prices,
     top_customer = max(customer_spending,
                        key=customer_spending.get)
 
-    with open("sales_report.txt","w",encoding="utf-8") as f:
+    with open("sales_report.txt", "w", encoding="utf-8") as f:
 
         f.write("E-Commerce Sales Report\n")
         f.write(f"Total Website Visits: {len(visits)}\n")
