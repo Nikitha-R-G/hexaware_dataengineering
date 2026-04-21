@@ -1,0 +1,8 @@
+emp_id,name,department,salary,joining_date
+1,Rahul,IT,70000,2023-01-10
+2,Sneha,HR,60000,2022-11-15
+3,Arjun,IT,75000,2023-03-01
+4,Priya,Finance,80000,2022-12-20
+5,Karan,IT,50000,2023-02-05
+6,Meera,,72000,2023-04-10
+7,Amit,HR,58000,2023-01-18

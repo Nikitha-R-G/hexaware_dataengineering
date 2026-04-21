@@ -1,0 +1,9 @@
+sale_id,emp_id,product,amount
+1,1,Laptop,75000
+2,2,Mouse,1500
+3,3,Keyboard,3000
+4,1,Monitor,12000
+5,4,Laptop,75000
+6,3,Mouse,1000
+7,5,Keyboard,1500
+8,1,Laptop,75000
